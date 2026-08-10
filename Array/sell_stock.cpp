@@ -15,10 +15,12 @@ int main() {
     }
 
     int result[5];  
-    for(int i = 0;i < 5;i++) 
-        result[i] = buy_price[i] - arr[i];
-
-    for(int i = 0;i < 5;i++) 
-        cout << result[i] << " "; 
+    int max_profit = INT_MIN;
+    for(int i = 0;i < 5;i++) {
+        result[i] = arr[i] - buy_price[i];
+        max_profit = max(max_profit, result[i]);
+        cout << result[i] << " ";
+    }
+    cout << "Max profit is: " << max_profit;
     return 0;
 } 
