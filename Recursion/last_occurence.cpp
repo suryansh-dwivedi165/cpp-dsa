@@ -1,15 +1,16 @@
 #include<iostream>
 using namespace std;
-int first_occurence(int arr[], int n, int target) {
+int last_occurence(int arr[], int n, int target) {
     if(arr[n - 1] == target) 
         return n;
-    first_occurence(arr, n - 1, target);
+    last_occurence(arr, n - 1, target);
     if(n == 0) 
         return -1;
 }
 int main() {
-    int arr[] = {1, 2, 31, 4, 5};
+    int arr[] = {1, 2, 3, 4, 5};
 
-    cout << first_occurence(arr, 5, 3);
+    int ans = last_occurence(arr, 5, 3);
+    cout << "Last occurence idx: " << ans;
     return 0;
 } 
