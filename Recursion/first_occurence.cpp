@@ -13,7 +13,7 @@ int main() {
     int arr[] = {1, 2, 3, 4, 3};
     int target = 3;
 
-    int ans = first_occurence(arr, 4, 3);
+    int ans = first_occurence(arr, 5, 3);
     cout << "Target idx is: " << ans;
     return 0;
 } 
