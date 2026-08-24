@@ -2,12 +2,12 @@
 #include<climits>
 using namespace std;
 int main() {
-    int arr[] = {1, 2, 3, 4, 5};
+    vector<int>v1 = {1, 2, 3, 4, 5};
     int max = INT_MIN;
 
     for(int i = 0;i < 5;i++) {
-        if(max < arr[i])
-            max = arr[i];
+        if(max < v1[i])
+            max = v1[i];
     }
 
     cout << "Maximum element is: " << max;
