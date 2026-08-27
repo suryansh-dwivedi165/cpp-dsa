@@ -10,4 +10,4 @@ int main() {
     }
     cout << base << " to the Power of " << power << " is equal to: "<< base2 << " ";
     return 0;
-} 
+}
