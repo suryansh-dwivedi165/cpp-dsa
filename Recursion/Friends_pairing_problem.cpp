@@ -7,7 +7,7 @@ int friend_pairing(int n) {
     return friend_pairing(n - 1) + (n - 1) * friend_pairing(n - 2);
 }
 int main() {
-    int n = 4;
+    int n = 5;
 
     cout << friend_pairing(n);
     return 0;
