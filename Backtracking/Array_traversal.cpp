@@ -17,5 +17,4 @@ int main() {
     for(int i = 0;i <= sizeof(ptr);i++) {
         cout << ptr[i] << " ";
     }
-    return 0;
 } 
