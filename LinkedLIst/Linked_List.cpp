@@ -90,6 +90,32 @@ public:
         temp->next = newNode;
     }
 
+    void pop_front() {
+        if(head == NULL) {
+            cout << "Linked list is empty ";
+            return;
+        }
+
+        Node* temp = head;
+        
+        head = head->next;
+        temp->next = NULL;
+        delete temp;
+        temp = nullptr;
+    }
+
+    void pop_back() {
+        Node* temp = head;
+
+        while(temp->next->next != NULL) {
+            temp = temp->next;
+        }
+
+        temp->next = NULL;
+        delete tail;
+        tail = temp;
+    } 
+
     void printll()
     {
         Node *temp = head;
@@ -110,6 +136,8 @@ int main()
     ll.printll();
 
     ll.insert_middle(100, 2);
+    ll.pop_front();
+    ll.pop_back();
     ll.printll();
     return 0;
-}
+} 
