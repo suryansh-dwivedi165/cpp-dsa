@@ -43,7 +43,7 @@ class List{
         
         for(int i = 0;i < pos - 1;i++) {
             if(temp == NULL) {
-                cout << "Position is not found";
+                cout << "\nPosition is not found ";
                 return;
             }
 
@@ -109,7 +109,20 @@ class List{
         }
         cout << "\n"; 
     }
-};
+
+    int find_idx(int el, int idx = 0) {
+        Node* temp = head;
+
+        while(temp != NULL) {
+            if(temp->data == el) {
+                return idx;
+            }
+            temp = temp->next;
+            idx++;
+        }
+        return -1;
+    }
+};  
 
 int main() {
     List ll;
@@ -121,5 +134,7 @@ int main() {
 
     ll.push_middle(12, 2);
     ll.printll();
+    int data = ll.find_idx(12);
+    cout << "Data is: " << data;
     return 0;
-} 
+}   
