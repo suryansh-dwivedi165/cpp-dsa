@@ -110,18 +110,18 @@ class List{
         cout << "\n"; 
     }
 
-    int find_idx(int el, int idx = 0) {
+   int find_idx(int val, int idx = 0) {
         Node* temp = head;
-
+        
         while(temp != NULL) {
-            if(temp->data == el) {
-                return idx;
+            if(temp->data == val) {
+                return idx+1;
             }
-            temp = temp->next;
+            temp->next = temp;
             idx++;
-        }
+        } 
         return -1;
-    }
+   }
 };  
 
 int main() {
@@ -134,7 +134,7 @@ int main() {
 
     ll.push_middle(12, 2);
     ll.printll();
-    int data = ll.find_idx(12);
-    cout << "Data is: " << data;
+    int res = ll.find_idx(1);
+    cout << "res is: " << res;
     return 0;
 }   
