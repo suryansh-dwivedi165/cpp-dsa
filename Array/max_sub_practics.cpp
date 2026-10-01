@@ -3,17 +3,16 @@
 using namespace std;
 int main() {
     int arr[] = {2, -3, 6, -5, 4, 2};
-    int sum = 0;
     int maxsum = INT_MIN;
-
+    
     for(int i = 0;i < 6;i++) {
-        sum += arr[i]; 
-        maxsum = max(maxsum, sum);
-
-        if(sum < 0) {
-            sum = 0; 
+        int sum = 0;
+        for(int j = i;j < 6;j++) {
+            sum += arr[j];
+            maxsum = max(maxsum, sum);
         }
     }
-    cout << maxsum << " "; 
+
+    cout << maxsum;
     return 0;
 } 
