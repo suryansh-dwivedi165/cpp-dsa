@@ -48,7 +48,7 @@ void printArr(int arr[], int n) {
 } 
 int main() {
     int arr[] = {6, 3, 5, 5, 2, 3};
-    merge_Sort(arr, 0, 6);
+    merge_Sort(arr, 0, 5);
 
     printArr(arr, 6);
     return 0;
