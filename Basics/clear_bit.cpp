@@ -9,3 +9,6 @@ int main() {
     cout << (digit & digit_value);
     return 0;
 }
+
+// parent class ka constructor then child class ka constructor 
+// child class ka desructor then parent class ka destructor 
