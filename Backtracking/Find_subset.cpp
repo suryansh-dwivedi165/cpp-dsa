@@ -6,8 +6,8 @@ void printsubsets(string str, string ans) {
         return;
     }
     
-    char ch = str[0];
-    printsubsets(str.substr(1, str.length() - 1), ans + ch);
+    char ch1 = str[0];
+    printsubsets(str.substr(1, str.length() - 1), ans + ch1);
 
     printsubsets(str.substr(1, str.length() - 1), ans); 
 }
