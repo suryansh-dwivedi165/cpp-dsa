@@ -14,7 +14,7 @@ public:
     }
 }; 
 int main() {
-    Solution p1;
+    Solution p1
     p1.pattern18(4);
     return 0;
 } 
